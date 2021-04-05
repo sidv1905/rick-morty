@@ -1,38 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+body {
+  margin: 0;
+  font-family: "Indie Flower", cursive;
+  font-weight: bolder;
+  background-color: #1f2833;
+  height: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100%;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 .App {
-  text-align: center;
+  margin: 0;
+  height: 100%;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 5%;
+  background-color: black;
+  color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 3%;
+}
+
+.login-gif {
+  border-radius: 30px;
+  margin: 4%;
+  cursor: pointer;
+  transition: all 3s ease-in;
+}
+
+.login-gif:hover {
+  transform: translate3d(30px, 30px, 30px);
+}
+
+h3 {
+  margin: 4%;
+}
+
+.episode-card {
+  background-image: linear-gradient(
+    to right top,
+    #1f2833,
+    #1c232c,
+    #191e26,
+    #16191f,
+    #121419,
+    #101216,
+    #0e0f13,
+    #0b0c10,
+    #0b0c10,
+    #0b0c10,
+    #0b0c10,
+    #0b0c10
+  );
   color: white;
+  box-shadow: 16px 27px 16px 0px rgba(11, 12, 16, 0.75);
+  min-height: 300px;
+  width: 25%;
+  margin: 3%;
+  border-radius: 10px;
+  padding: 2%;
+  transition: min-height 1s ease-in;
 }
 
-.App-link {
-  color: #61dafb;
+.big {
+  min-height: 600px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.episode-heading {
+  color: #66fcf1;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00a0c6;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
   }
-  to {
-    transform: rotate(360deg);
+  .episode-card {
+    flex-basis: 100%;
   }
+}
+
+.character-list {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.char-card {
+  background-image: linear-gradient(
+    to left bottom,
+    #0b0c10,
+    #212d38,
+    #2c5160,
+    #327883,
+    #45a29e
+  );
+  box-shadow: 16px 27px 16px 0px rgba(11, 12, 16, 0.75);
+  border-radius: 10px;
+  padding: 7%;
+  margin: 10% 0px;
+}
+
+.char-card > img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.location-container {
+  background-color: white;
+  color: black;
+  padding: 5%;
+  font-weight: bolder;
+}
+
+.hover-card {
+  transform: translateZ(30px);
+}
+
+.paginate > ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+}
+.paginate > ul > li {
+  padding: 0% 10%;
+  color: #66fcf1;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
 }
